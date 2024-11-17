@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+Project Structure:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App.tsx: The main component that manages the state, rendering, and logic for the application.
 
-## Available Scripts
+App.css: A CSS file providing styling for the components.
 
-In the project directory, you can run:
+Assets Folder (assets/images): Contains the image files used as thumbnails for the collections.
 
-### `npm start`
+Type Definitions: The Collection type is defined in App.tsx to ensure type safety for the data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Filter Functionality: Users can filter the collections by type (e.g., All Files, Photos, Videos, Documents).
 
-### `npm test`
+Search Functionality: Users can search collections by title using a search bar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Edit Functionality: Users can click on a collection title to edit it and save or cancel changes.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+collections: Holds the initial set of collections.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+filter: Tracks the current filter applied (default is 'All Files').
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+searchTerm: Stores the user's input from the search bar.
 
-### `npm run eject`
+editingId: Identifies the collection currently being edited.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+newTitle: Stores the new title input for an edited collection.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Grid Display: The collections are split into two rows for display.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Filter Buttons: A set of buttons allows users to filter collections by type.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Search Bar: An input field for searching collections by title.
 
-## Learn More
+Collection Items: Each collection item displays an image, a title, and item count.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Filter Collections: Click on a filter button to view specific types of collections.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Search: Type into the search bar to filter collections by title.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Edit Title: Click on a collection title to make it editable. Modify the title and click 'Save' to update or 'Cancel' to discard changes.
